@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Choice of Chicken, Pork, or Vegetable",
+    "description": "",
+    "price": "$11.95",
+    "type": "moo-shi",
+    "spicy": false
+  },
+  {
+    "title": "Choice of Beef, Shrimp, or Combo",
+    "description": "",
+    "price": "$12.95",
+    "type": "moo-shi",
+    "spicy": false
+  }
+]

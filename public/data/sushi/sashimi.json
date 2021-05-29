@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Tuna",
+    "description": "",
+    "price": "$7.00",
+    "type": "sashimi",
+    "spicy": false
+  },
+  {
+    "title": "Salmon",
+    "description": "",
+    "price": "$6.25",
+    "type": "sashimi",
+    "spicy": false
+  },
+  {
+    "title": "Yellowtail",
+    "description": "",
+    "price": "$7.50",
+    "type": "sashimi",
+    "spicy": false
+  }
+]

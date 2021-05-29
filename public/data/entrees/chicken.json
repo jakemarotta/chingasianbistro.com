@@ -1,0 +1,121 @@
+[
+  {
+    "title": "General Chicken",
+    "description": "Also known as spicy-honey chicken.",
+    "price": "$11.95",
+    "type": "chicken",
+    "spicy": true
+  },
+  {
+    "title": "Sesame Chicken",
+    "description": "Tender pieces of crispy chicken sprinkled with sesame seed in a sweet sauce.",
+    "price": "$11.95",
+    "type": "chicken",
+    "spicy": false
+  },
+  {
+    "title": "Honey Chicken",
+    "description": "Crispy chicken in a honey glaze sauce.",
+    "price": "$11.95",
+    "type": "chicken",
+    "spicy": false
+  },
+  {
+    "title": "Szechuan Chicken",
+    "description": "Minced water chestnuts, onion, mushrooms in chef's special hot peppered sauce.",
+    "price": "$12.95",
+    "type": "chicken",
+    "spicy": true
+  },
+  {
+    "title": "Lemon Chicken",
+    "description": "Tender chicken breaded and fried with sweet lemon sauce on the side.",
+    "price": "$12.95",
+    "type": "chicken",
+    "spicy": false
+  },
+  {
+    "title": "Hunan Chicken",
+    "description": "Tasty sweet and hot sauce is used to saute the tender chicken and fresh vegetables.",
+    "price": "$12.95",
+    "type": "chicken",
+    "spicy": true
+  },
+  {
+    "title": "Kung Pao Chicken",
+    "description": "A quick-fired traditional dish with peanuts and vegetables.",
+    "price": "$10.50",
+    "type": "chicken",
+    "spicy": true
+  },
+  {
+    "title": "Five-Flavored Chicken",
+    "description": "Sliced chicken sauteed with vegetables in a five-flavored sauce.",
+    "price": "$10.50",
+    "type": "chicken",
+    "spicy": true
+  },
+  {
+    "title": "Cashew Chicken",
+    "description": "Chicken served with crispy cashew nuts and vegetables in a sweet brown sauce.",
+    "price": "$10.50",
+    "type": "chicken",
+    "spicy": false
+  },
+  {
+    "title": "Moo Goo Gai Pan",
+    "description": "Sliced chicken sauteed with vegetables in a white sauce.",
+    "price": "$10.50",
+    "type": "chicken",
+    "spicy": false
+  },
+  {
+    "title": "Chicken with Vegetables",
+    "description": "Sliced chicken sauteed with vegetables in a brown sauce.",
+    "price": "$10.50",
+    "type": "chicken",
+    "spicy": false
+  },
+  {
+    "title": "Mongolian Chicken",
+    "description": "Sliced chicken with scallions, onions, and bamboo shoots sauteed with hoisin sauce.",
+    "price": "$10.50",
+    "type": "chicken",
+    "spicy": false
+  },
+  {
+    "title": "Sweet & Sour Chicken",
+    "description": "Deep fried chicken served with fresh made sweet and sour sauce.",
+    "price": "$10.50",
+    "type": "chicken",
+    "spicy": false
+  },
+  {
+    "title": "Chicken with Broccoli",
+    "description": "Sliced chicken sauteed with fresh broccoli in a white sauce.",
+    "price": "$10.50",
+    "type": "chicken",
+    "spicy": false
+  },
+  {
+    "title": "Almond Chicken",
+    "description": "Chicken served with crispy almonds and vegetables in a brown sauce.",
+    "price": "$10.50",
+    "type": "chicken",
+    "spicy": false
+  },
+  {
+    "title": "Orange Chicken",
+    "description": "Crispy chicken tossed with vegetables in a classic orange sauce.",
+    "price": "$12.95",
+    "type": "chicken",
+    "spicy": true
+  },
+  {
+    "title": "Teriyaki Chicken",
+    "description": "Grilled chicken breast glazed with teriyaki sauce and served with steamed vegetables.",
+    "price": "$14.95",
+    "type": "chicken",
+    "spicy": false
+  }
+]

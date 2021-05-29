@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Choice of Chicken, Pork, or Vegetable",
+    "description": "",
+    "price": "$9.95",
+    "type": "lo-mein",
+    "spicy": false
+  },
+  {
+    "title": "Choice of Beef, Shrimp, or Combo",
+    "description": "",
+    "price": "$11.95",
+    "type": "lo-mein",
+    "spicy": false
+  }
+]

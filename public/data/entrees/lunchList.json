@@ -1,0 +1,50 @@
+[
+  {
+    "title": "General Chicken",
+    "spicy": true
+  },
+  {
+    "title": "Sesame Chicken",
+    "spicy": false
+  },
+  {
+    "title": "Honey Chicken",
+    "spicy": false
+  },
+  {
+    "title": "Hunan Chicken",
+    "spicy": true
+  },
+  {
+    "title": "Moo Goo Gai Pan",
+    "spicy": false
+  },
+  {
+    "title": "Shrimp with Lobster Sauce",
+    "spicy": false
+  },
+  {
+    "title": "Cashew Chicken",
+    "spicy": false
+  },
+  {
+    "title": "Almond Chicken",
+    "spicy": false
+  },
+  {
+    "title": "Rainbow Shrimp",
+    "spicy": false
+  },
+  {
+    "title": "Tsoa San Shein",
+    "spicy": false
+  },
+  {
+    "title": "Triple Crown",
+    "spicy": true
+  },
+  {
+    "title": "Shrimp & Chicken Hunan Style",
+    "spicy": true
+  }
+]

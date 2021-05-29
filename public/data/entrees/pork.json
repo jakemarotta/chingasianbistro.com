@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Sweet & Sour Pork",
+    "description": "Deep fried pork cubes served with fresh made sweet & sour sauce.",
+    "price": "$10.95",
+    "type": "pork",
+    "spicy": false
+  },
+  {
+    "title": "Mongolian Pork",
+    "description": "Scallions and onions sauteed with sliced pork in hoisin sauce.",
+    "price": "$10.95",
+    "type": "pork",
+    "spicy": false
+  },
+  {
+    "title": "Five-Flavored Pork",
+    "description": "Sliced pork and vegetables sauteed with Five-flavored sauce.",
+    "price": "$10.95",
+    "type": "pork",
+    "spicy": true
+  },
+  {
+    "title": "Pork with Black Bean Sauce",
+    "description": "Sliced pork and vegetables sauteed with black bean sauce.",
+    "price": "$10.95",
+    "type": "pork",
+    "spicy": true
+  },
+  {
+    "title": "Pork with Vegetables",
+    "description": "Sliced pork and vegetables sauteed with brown sauce.",
+    "price": "$10.95",
+    "type": "pork",
+    "spicy": false
+  },
+  {
+    "title": "Double-Cooked Pork",
+    "description": "Pork slices dipped then sauteed with vegetables in Chinese chili sauce.",
+    "price": "$10.95",
+    "type": "pork",
+    "spicy": true
+  }
+]

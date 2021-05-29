@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Edamame",
+    "description": "",
+    "price": "$5.00",
+    "type": "sushi-appetizer",
+    "spicy": false
+  },
+  {
+    "title": "Fried Soft Shell Crab",
+    "description": "",
+    "price": "$9.95",
+    "type": "sushi-appetizer",
+    "spicy": false
+  },
+  {
+    "title": "Ika Salad (Squid Salad)",
+    "description": "",
+    "price": "$5.95",
+    "type": "sushi-appetizer",
+    "spicy": false
+  },
+  {
+    "title": "Seaweed Salad",
+    "description": "",
+    "price": "$5.25",
+    "type": "sushi-appetizer",
+    "spicy": false
+  }
+]

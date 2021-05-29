@@ -1,0 +1,121 @@
+[
+  {
+    "title": "Seafood Splendor",
+    "description": "Shrimp, scallop, and crab meat are tastefully sauteed with vegetables in a light sauce.",
+    "price": "$16.95",
+    "type": "seafood",
+    "spicy": false
+  },
+  {
+    "title": "Seafood Szechuan",
+    "description": "Shrimp, scallop, and crab meat are sauteed with vegetables in a five-flavored sauce.",
+    "price": "$16.95",
+    "type": "seafood",
+    "spicy": true
+  },
+  {
+    "title": "Scallop Delight",
+    "description": "Fresh vegetables sauteed with scallops in a light sauce.",
+    "price": "$17.95",
+    "type": "seafood",
+    "spicy": false
+  },
+  {
+    "title": "Crispy Shrimp with Cashew Nuts",
+    "description": "Lightly battered shrimp sauteed with vegetables in a sweet brown sauce.",
+    "price": "$14.95",
+    "type": "seafood",
+    "spicy": false
+  },
+  {
+    "title": "Kung Pao Shrimp",
+    "description": "A quick fired traditional dish with peanuts, chili peppers, and vegetables.",
+    "price": "$12.95",
+    "type": "seafood",
+    "spicy": true
+  },
+  {
+    "title": "Shrimp and Lobster Sauce",
+    "description": "A garlic white wine sauce with fresh vegetables and egg.",
+    "price": "$12.95",
+    "type": "seafood",
+    "spicy": false
+  },
+  {
+    "title": "Five-Flavored Shrimp",
+    "description": "Shrimp sauteed with fresh vegetables in a five-flavored sauce.",
+    "price": "$12.95",
+    "type": "seafood",
+    "spicy": true
+  },
+  {
+    "title": "Szechuan Shrimp",
+    "description": "Minced water chestnuts, onions, and mushrooms in chef's special hot peppered sauce.",
+    "price": "$12.95",
+    "type": "seafood",
+    "spicy": true
+  },
+  {
+    "title": "Sweet & Sour Shrimp",
+    "description": "Deep friend shrimp served with pineapple and carrots in fresh made sweet & sour sauce.",
+    "price": "$12.95",
+    "type": "seafood",
+    "spicy": false
+  },
+  {
+    "title": "Shrimp with Vegetables",
+    "description": "Shrimp sauteed with fresh vegetables in a brown sauce.",
+    "price": "$12.95",
+    "type": "seafood",
+    "spicy": false
+  },
+  {
+    "title": "Shrimp with Cashew Nuts",
+    "description": "Shrimp served with crispy cashew nuts and vegetables in a sweet brown sauce.",
+    "price": "$12.95",
+    "type": "seafood",
+    "spicy": false
+  },
+  {
+    "title": "Rainbow Shrimp",
+    "description": "Shrimp sauteed with vegetables in a white sauce.",
+    "price": "$12.95",
+    "type": "seafood",
+    "spicy": false
+  },
+  {
+    "title": "Shrimp with Black Bean Sauce",
+    "description": "Shrimp with vegetables sauteed in a black bean sauce.",
+    "price": "$12.95",
+    "type": "seafood",
+    "spicy": false
+  },
+  {
+    "title": "Hot Fish",
+    "description": "Our crispy, fresh, daily selection in a hot five-flavored sauce with steamed vegetables.",
+    "price": "$14.95",
+    "type": "seafood",
+    "spicy": true
+  },
+  {
+    "title": "Salt N' Pepper Soft Shell Crab",
+    "description": "Crispy whole soft shell crab cut and stir-fried in a hot wok seasoned with salt & pepper.",
+    "price": "$18.95",
+    "type": "seafood",
+    "spicy": false
+  },
+  {
+    "title": "Pineapple Shrimp",
+    "description": "Lightly battered friend shrimp with pineapple served in a juicy asian mayo-sauce.",
+    "price": "$14.95",
+    "type": "seafood",
+    "spicy": false
+  },
+  {
+    "title": "Grilled Salmon in Teriyaki Sauce",
+    "description": "Sushi-grade grilled salmon in teriyaki sauce with vegetables.",
+    "price": "$18.95",
+    "type": "seafood",
+    "spicy": false
+  }
+]

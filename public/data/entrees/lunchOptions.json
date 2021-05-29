@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Five-Flavored",
+    "options": "Choice of Beef, Pork, Shrimp, or Vegetble",
+    "spicy": true
+  },
+  {
+    "title": "Kung Pao",
+    "options": "Choice of Chicken, Beef, or Shrimp",
+    "spicy": true
+  },
+  {
+    "title": "Broccoli",
+    "options": "Choice of Chicken, Beef, or Shrimp",
+    "spicy": false
+  },
+  {
+    "title": "Mixed Vegetables",
+    "options": "Choice of Chicken, Beef, Pork, or Shrimp",
+    "spicy": false
+  },
+  {
+    "title": "Sweet & Sour",
+    "options": "Choice of Chicken, Beef, Pork, or Shrimp",
+    "spicy": false
+  },
+  {
+    "title": "Mongolian",
+    "options": "Choice of Chicken, Beef, or Pork",
+    "spicy": false
+  },
+  {
+    "title": "Egg Foo Young",
+    "options": "Choice of Chicken, Beef, Pork, or Vegetables",
+    "spicy": false
+  },
+  {
+    "title": "Lo Mein or Fried Rice",
+    "options": "Choice of Chicken, Beef, Pork, or Vegetables",
+    "spicy": false
+  }
+]
