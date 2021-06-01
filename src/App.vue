@@ -3,7 +3,7 @@
 
     <header>
       <router-link to="/">
-        <img alt="Ching Asian Bistro" src="/images/logo/chingasianbistro.png">
+        <img alt="Ching Asian Bistro" src="./assets/logo/chingasianbistro.png">
       </router-link>
       <b-navbar sticky toggleable="sm" type="dark" class="mx-auto main-navbar">
         

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-img fluid src="/images/banners/contact-banner.jpg" class="d-block mb-2" />
+    <b-img fluid src="../assets/banners/contact-banner.jpg" class="d-block mb-2" />
 
     <HoursOfOperation class="mx-5 mb-4" />
 

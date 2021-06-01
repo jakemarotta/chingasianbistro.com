@@ -39,7 +39,7 @@
             • {{item.title}}
             <img
               v-if="item.spicy"
-              src="/images/menu/hotpepper.png"
+              src="../../assets/menu/hotpepper.png"
               alt="Hot &amp; Spicy"
               className="ml-1 mb-1"
             />

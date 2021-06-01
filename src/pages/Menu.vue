@@ -10,13 +10,46 @@
           label-prev=""
           fade
         >
-          <b-carousel-slide
-            v-for="(src, menuName, index) in banners"
-            :key="`banner_image_${index}`"
-            class=""
-            :img-src="src"
-            :alt="`${menuName} menu banner`"
-          />
+          <b-carousel-slide >
+            <template #img>
+              <img
+                src="../assets/banners/appetizers-banner.jpg"
+                alt="Appetizers Menu banner"
+              >
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide >
+            <template #img>
+              <img
+                src="../assets/banners/entrees-banner.jpg"
+                alt="Entrees Menu banner"
+              >
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide >
+            <template #img>
+              <img
+                src="../assets/banners/sides-banner.jpg"
+                alt="Sides Menu banner"
+              >
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide >
+            <template #img>
+              <img
+                src="../assets/banners/specials-banner.jpg"
+                alt="Specials Menu banner"
+              >
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide >
+            <template #img>
+              <img
+                src="../assets/banners/sushi-banner.jpg"
+                alt="Sushi Menu banner"
+              >
+            </template>
+          </b-carousel-slide>
         </b-carousel>
         <b-navbar toggleable="md" class="menu-navbar border-bottom-black">
           <b-navbar-nav pills class="flex-wrap justify-content-around align-items-center w-100">
@@ -92,11 +125,11 @@ export default {
         },
       },
       banners: {
-        appetizers: "/images/banners/appetizers-banner.jpg",
-        entrees: "/images/banners/entrees-banner.jpg",
-        sides: "/images/banners/sides-banner.jpg",
-        specials: "/images/banners/specials-banner.jpg",
-        sushi: "/images/banners/sushi-banner.jpg",
+        appetizers: "../assets/banners/appetizers-banner.jpg",
+        entrees: "../assets/banners/entrees-banner.jpg",
+        sides: "../assets/banners/sides-banner.jpg",
+        specials: "../assets/banners/specials-banner.jpg",
+        sushi: "../assets/banners/sushi-banner.jpg",
       }
     }
   },

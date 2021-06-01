@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-img fluid src="/images/chingasianbistromap.jpg" height="528" class="d-block" />
+    <b-img fluid src="../assets/chingasianbistromap.jpg" height="528" class="d-block" />
   </div>
 </template>
 

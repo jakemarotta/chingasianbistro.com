@@ -2,7 +2,7 @@
   <div>
     <b-img 
       fluid 
-      src="images/banners/about-banner.jpg" 
+      src="../assets/banners/about-banner.jpg" 
       class="d-block mb-2"
     />
     
