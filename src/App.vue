@@ -184,8 +184,8 @@ export default {
   height: 100%;
   width: 100%;
   background-image: url(./assets/chingasiancuisine_bg.jpg);
-  background-position: "top center";
-  background-repeat: "no-repeat";
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 html,
@@ -259,7 +259,7 @@ body {
 .main-container {
   position: relative;
   max-width: calc(870px + 0.5em);
-  min-height: 300px;
+  /* min-height: 300px; */
 }
 
 .main-container > .b-overlay-wrap > .b-overlay .spinner-border {
@@ -285,7 +285,6 @@ footer {
 
 .bg-main {
   background-color: #aca286;
-  min-height: 400px;
 }
 
 /*
@@ -312,15 +311,14 @@ footer {
   Transitions
 */
 .fade-enter-active, .fade-leave-active {
-  transition-property: opacity;
-  transition-duration: .25s;
+  transition: 0.25s opacity linear;
 }
 
 .fade-enter-active {
-  transition-delay: .25s;
+  /* transition-delay: .25s; */
 }
 
-.fade-enter, .fade-leave-active {
+.fade-enter, .fade-leave-to {
   opacity: 0
 }
 

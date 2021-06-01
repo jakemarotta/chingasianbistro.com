@@ -2,12 +2,22 @@
   <div class="menu-page">
     <b-overlay :show="menuLoading" bg-color="#aca286" rounded no-center>
       <header>
-        <b-img 
-          fluid
-          :src="menuBanner"
-          class="d-block"
-          height="300"
-        />
+        <b-carousel
+          id="menu-carousel"
+          :value="menuBanner"
+          img-height="374"
+          label-next=""
+          label-prev=""
+          fade
+        >
+          <b-carousel-slide
+            v-for="(src, menuName, index) in banners"
+            :key="`banner_image_${index}`"
+            class=""
+            :img-src="src"
+            :alt="`${menuName} menu banner`"
+          />
+        </b-carousel>
         <b-navbar toggleable="md" class="menu-navbar border-bottom-black">
           <b-navbar-nav pills class="flex-wrap justify-content-around align-items-center w-100">
             <b-nav-item to="/menu/appetizers" class="mx-2">
@@ -29,7 +39,7 @@
         </b-navbar>
       </header>
       <main>
-        <transition name="fade" mode="out-in">
+        <transition name="fade">
           <router-view />
         </transition>
       </main>
@@ -81,13 +91,27 @@ export default {
           appetizers: [],
         },
       },
+      banners: {
+        appetizers: "/images/banners/appetizers-banner.jpg",
+        entrees: "/images/banners/entrees-banner.jpg",
+        sides: "/images/banners/sides-banner.jpg",
+        specials: "/images/banners/specials-banner.jpg",
+        sushi: "/images/banners/sushi-banner.jpg",
+      }
     }
   },
   computed: {
     menuBanner() {
       const menu = this.$route.path.split("/").pop();
-      return `/images/banners/${menu}-banner.jpg`;
+      return Object.keys(this.banners).findIndex(key => key === menu);
     },
+  },
+  methods: {
+    bannerClass(bannerSrc) {
+      return {
+        "is-hidden": bannerSrc !== this.menuBanner,
+      };
+    }
   },
   provide() {
     return {
@@ -103,12 +127,22 @@ export default {
 }
 </script>
 
-<style>
-.menu-page {
+<style scoped>
+.menu-page .banner-container {
   position: relative;
 }
 
-.menu-navbar.navbar-expand {
+.menu-page .banner-container .menu-banner {
+  position: relative;
+  transition: 0.5s opacity linear;
+  opacity: 1;  
+}
+
+.menu-page .banner-container .menu-banner.is-hidden {
+  opacity: 0;
+}
+
+.menu-navbar {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
@@ -129,5 +163,18 @@ export default {
 .menu-navbar .navbar-nav a.nav-link:hover {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.5)
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: 0.25s opacity linear;
+  opacity: 1;
+}
+
+.fade-enter-active {
+  transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0
 }
 </style>

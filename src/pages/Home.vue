@@ -68,6 +68,6 @@ export default {
 
 <style scoped>
 .carousel {
-  height: 374px;
+  /* height: 374px; */
 }
 </style>
