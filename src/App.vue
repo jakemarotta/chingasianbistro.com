@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
+  <div id="app" :class="appClass">
 
     <header>
       <router-link to="/">
         <img alt="Ching Asian Bistro" src="/images/logo/chingasianbistro.png">
       </router-link>
-      <b-navbar toggleable="sm" type="dark" class="mx-auto main-navbar">
+      <b-navbar sticky toggleable="sm" type="dark" class="mx-auto main-navbar">
         
         <b-navbar-toggle target="main-navbar-collapse" />
         <b-collapse id="main-navbar-collapse" is-nav>
@@ -29,7 +29,11 @@
 
     <main role="main">
       <div class="bg-main mx-auto mb-3 p-1 main-container">
-        <router-view />
+        <b-overlay :show="pageLoading" bg-color="#aca286" rounded no-center>
+          <transition name="fade" mode="out-in">
+            <router-view />
+          </transition>
+        </b-overlay>
       </div>
     </main>
 
@@ -93,7 +97,25 @@
         </b-row>
       </b-container>
     </footer>
-    
+
+    <transition name="fade">
+      <div id="scrollToTopButton" v-show="scrollY > 300" @click="toTop">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="48" 
+          height="48" 
+          viewBox="0 0 24 24" 
+          fill="none"
+          stroke="#ffffff"
+          stroke-opacity="0.5"
+          stroke-width="1" 
+          stroke-linecap="square" 
+          stroke-linejoin="arcs"
+        >
+          <path d="M18 15l-6-6-6 6"/>
+        </svg>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -106,7 +128,53 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     BIcon,
     BIconFacebook,
-  }
+  },
+  data() {
+    return {
+      scrollTimeout: 0,
+      scrollY: 0,
+      pageLoading: true,
+    }
+  },
+  computed: {
+    appClass() {
+      return {
+        "is-loading": this.pageLoading,
+      }
+    }
+  },
+  created() {
+    this.$router.beforeEach((to, from, next) => {
+      this.pageLoading = true;
+      next();
+    });
+    this.$router.afterEach(() => {
+      this.pageLoading = false;
+    });
+    window.addEventListener("load", this.onLoad);
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll: function () {
+      if (this.scrollTimeout) return;
+      this.scrollTimeout = setTimeout(() => {
+        this.scrollY = window.scrollY;
+        clearTimeout(this.scrollTimeout);
+        this.scrollTimeout = 0;
+      }, 100);
+    },
+    toTop: function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    },
+    onLoad() {
+      this.pageLoading = false;
+    },
+  },
 }
 </script>
 
@@ -131,6 +199,15 @@ body {
 
 body {
   background-color: #000000;
+}
+
+#scrollToTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 8px 12px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
 }
 
 /*
@@ -180,7 +257,13 @@ body {
 */
 
 .main-container {
+  position: relative;
   max-width: calc(870px + 0.5em);
+  min-height: 300px;
+}
+
+.main-container > .b-overlay-wrap > .b-overlay .spinner-border {
+  margin-top: 200px;
 }
 
 footer {
@@ -202,6 +285,7 @@ footer {
 
 .bg-main {
   background-color: #aca286;
+  min-height: 400px;
 }
 
 /*
@@ -222,6 +306,22 @@ footer {
 
 .border-bottom-black {
   border-bottom: 1px solid #000000;
+}
+
+/* 
+  Transitions
+*/
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.fade-enter-active {
+  transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 
 </style>

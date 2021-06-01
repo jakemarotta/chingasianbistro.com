@@ -1,8 +1,10 @@
 
 module.exports = {
   configureWebpack: {
-    externals: {
-
+    resolve: {
+      alias: {
+        components: "./src/components"
+      }
     }
   }
 }
