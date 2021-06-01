@@ -1,28 +1,227 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <header>
+      <router-link to="/">
+        <img alt="Ching Asian Bistro" src="/images/logo/chingasianbistro.png">
+      </router-link>
+      <b-navbar toggleable="sm" type="dark" class="mx-auto main-navbar">
+        
+        <b-navbar-toggle target="main-navbar-collapse" />
+        <b-collapse id="main-navbar-collapse" is-nav>
+          <b-navbar-nav fill tabs class="justify-space-between w-100">
+            <b-nav-item to="/about">
+              <h5 class="font-weight-light">About</h5>
+            </b-nav-item>
+            <b-nav-item to="/menu">
+              <h5 class="font-weight-light">Menu</h5>
+            </b-nav-item>
+            <b-nav-item to="/location">
+              <h5 class="font-weight-light">Location</h5>
+            </b-nav-item>
+            <b-nav-item to="/contact">
+              <h5 class="font-weight-light">Contact</h5>
+            </b-nav-item>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
+    </header>
+
+    <main role="main">
+      <div class="bg-main mx-auto mb-3 p-1 main-container">
+        <router-view />
+      </div>
+    </main>
+
+    <footer>
+      <b-container>
+        <b-row>
+          <b-col>
+            <h5 class="pb-1 border-bottom-main">Social Media</h5>
+            <div class="flex-wrap justify-content-center">
+              <a class="social-icon" href="https://www.facebook.com/Ching-Asian-Bistro-150821338404204/" target="_blank">
+                <BIconFacebook />
+              </a>
+            </div>
+          </b-col>
+          <b-col cols="6">
+            <h5 class="pb-1 border-bottom-main">
+              Located in Franklin, TN
+            </h5>
+            <p>
+              Formerly the Great Wall of China Restaurant, Ching Asian Bistro
+              offers a variety of excellent Asian Chinese foods in a friendly,
+              family-oriented atmosphere. You can always count on us for a
+              great menu selection, personalized services, and competitive
+              prices. Our friendly staff works one-on-one with you to make
+              each visit a pleasant one.
+            </p>
+          </b-col>
+          <b-col>
+            <h5 class="pb-1 border-bottom-main">Navigate</h5>
+            <b-nav vertical class="footer-nav align-items-start">
+              <b-nav-item to="/about">
+                About
+              </b-nav-item>
+              <b-nav-item to="/menu">
+                Menu
+              </b-nav-item>
+              <b-nav-item to="/location">
+                Location
+              </b-nav-item>
+              <b-nav-item to="/contact">
+                Contact Us
+              </b-nav-item>
+            </b-nav>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col class="d-flex justify-content-around border-top-main border-bottom-main py-1">
+            <span class="font-weight-bold">Ching Asian Bistro</span>
+            <span class="px-2">|</span>
+            <span>(615) 595-9780</span>
+            <span class="px-2">|</span>
+            <span>188 Front St. Suite 104</span>
+            <span class="px-2">|</span>
+            <span>Franklin, TN 37064</span>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col>
+            <span>© 2019. All rights reserved.</span>
+          </b-col>
+        </b-row>
+      </b-container>
+    </footer>
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { BIcon, BIconFacebook } from "bootstrap-vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // eslint-disable-next-line vue/no-unused-components
+    BIcon,
+    BIconFacebook,
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+  width: 100%;
+  background-image: url(./assets/chingasiancuisine_bg.jpg);
+  background-position: "top center";
+  background-repeat: "no-repeat";
 }
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  
+}
+
+body {
+  background-color: #000000;
+}
+
+/*
+  Navbar
+*/
+
+.main-navbar {
+  color: #aca286;
+  max-width: calc(870px + 0.5em);
+}
+
+.main-navbar .navbar-nav {
+  border-color: 1px solid #aca286;
+}
+
+.main-navbar .navbar-nav .nav-link {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #aca286;
+  border-radius: 4px;
+}
+
+.main-navbar .navbar-nav .nav-item:not(:last-child) {
+  margin-right: 4px;
+}
+
+.main-navbar .navbar-nav .nav-link.router-link-active {
+  border-color: #aca286;
+  /* text-decoration: underline; */
+}
+
+.main-navbar .navbar-nav .nav-link:hover {
+  border-color: #aca286;
+}
+
+.footer-nav .nav-link {
+  padding: 0;
+  padding-bottom: 4px;
+}
+
+.social-icon {
+  font-size: 32px;
+}
+
+/*
+  Sections
+*/
+
+.main-container {
+  max-width: calc(870px + 0.5em);
+}
+
+footer {
+  color: #aca286;
+}
+
+
+/*
+  Background
+*/
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-main {
+  background-color: #aca286;
+}
+
+/*
+  Border
+*/
+
+.border-top-main {
+  border-top: 1px solid #aca286;
+}
+
+.border-top-black {
+  border-top: 1px solid #000000;
+}
+
+.border-bottom-main {
+  border-bottom: 1px solid #aca286;
+}
+
+.border-bottom-black {
+  border-bottom: 1px solid #000000;
+}
+
 </style>

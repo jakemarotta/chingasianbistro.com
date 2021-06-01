@@ -1,0 +1,86 @@
+<template>
+  <div>
+    <div class="lunch-specials">  
+      <div>
+        <h4 className="text-center">Lunch Menu Specials</h4>
+        <h6 className="text-center">Served from {{menu.entrees.lunchSchedule.startTime}} - {{menu.entrees.lunchSchedule.endTime}}, Tue - Sat</h6>
+        <h6 className="text-center">Served from {{menu.entrees.lunchSchedule.sundayStartTime}} - {{menu.entrees.lunchSchedule.sundayEndTime}}, Sun</h6>
+        <h6 className="text-center">All lunches priced at {{menu.entrees.lunchSchedule.price}}</h6>
+      </div>
+
+      <div className="d-flex flex-wrap justify-content-center align-items-center text-center px-4 mb-3">
+        <div>
+          <span 
+            className="mx-3"
+            v-for="(item, index) in menu.entrees.lunchList" 
+            :key="`lunch_list_item_${index}`"
+          >
+            • {{item.title}}
+            <img
+              v-if="item.spicy"
+              src="/images/menu/hotPepper.png"
+              alt="Hot &amp; Spicy"
+              className="ml-1 mb-1"
+            />
+          </span>
+        </div>
+      </div>
+      <div className="container px-5">
+        <MenuItem
+          v-for="(option, index) in menu.entrees.lunchOptions"
+          :key="`lunch_option_${index}`"
+          v-bind="option"
+        />
+      </div>
+    </div>
+
+    <MenuSection title="Beef Entrees">
+      <MenuItem
+        v-for="(entree, index) in menu.entrees.beef"
+        :key="`beef_entree_${index}`"
+        v-bind="entree"
+      />
+    </MenuSection>
+    <MenuSection title="Pork Entrees">
+      <MenuItem
+        v-for="(entree, index) in menu.entrees.pork"
+        :key="`beef_entree_${index}`"
+        v-bind="entree"
+      />
+    </MenuSection>
+    <MenuSection title="Vegetable Entrees">
+      <MenuItem
+        v-for="(entree, index) in menu.entrees.vegetable"
+        :key="`beef_entree_${index}`"
+        v-bind="entree"
+      />
+    </MenuSection>
+    <MenuSection title="Seafood Entrees">
+      <MenuItem
+        v-for="(entree, index) in menu.entrees.seafood"
+        :key="`beef_entree_${index}`"
+        v-bind="entree"
+      />
+    </MenuSection>
+    <MenuSection title="Chicken Entrees">
+      <MenuItem
+        v-for="(entree, index) in menu.entrees.chicken"
+        :key="`beef_entree_${index}`"
+        v-bind="entree"
+      />
+    </MenuSection>
+  </div>
+</template>
+
+<script>
+import { MenuSection, MenuItem } from "../../components";
+
+export default {
+  name: "Entrees",
+  components: {
+    MenuSection,
+    MenuItem,
+  },
+  inject: ["menu"],
+}
+</script>
