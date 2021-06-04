@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="home-page content-page">
     <b-carousel
       id="home-carousel"
+      class="banner"
       :interval="3000"
-      img-height="374"
       label-next=""
       label-prev=""
       controls
@@ -99,7 +99,10 @@ export default {
 </script>
 
 <style scoped>
-.carousel {
-  /* height: 374px; */
+.home-page #home-carousel .carousel-item {
+  overflow: hidden;
+}
+.home-page #home-carousel .carousel-item img {
+  width: 100%;
 }
 </style>

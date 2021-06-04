@@ -1,76 +1,76 @@
 <template>
-  <div class="menu-page">
+  <div class="menu-page content-page">
+    <header class="banner">
+      <b-carousel
+        id="menu-carousel"
+        :value="menuBanner"
+        label-next=""
+        label-prev=""
+        fade
+      >
+        <b-carousel-slide >
+          <template #img>
+            <img
+              src="../assets/banners/appetizers-banner.jpg"
+              alt="Appetizers Menu banner"
+            >
+          </template>
+        </b-carousel-slide>
+        <b-carousel-slide >
+          <template #img>
+            <img
+              src="../assets/banners/entrees-banner.jpg"
+              alt="Entrees Menu banner"
+            >
+          </template>
+        </b-carousel-slide>
+        <b-carousel-slide >
+          <template #img>
+            <img
+              src="../assets/banners/sides-banner.jpg"
+              alt="Sides Menu banner"
+            >
+          </template>
+        </b-carousel-slide>
+        <b-carousel-slide >
+          <template #img>
+            <img
+              src="../assets/banners/specials-banner.jpg"
+              alt="Specials Menu banner"
+            >
+          </template>
+        </b-carousel-slide>
+        <b-carousel-slide >
+          <template #img>
+            <img
+              src="../assets/banners/sushi-banner.jpg"
+              alt="Sushi Menu banner"
+            >
+          </template>
+        </b-carousel-slide>
+      </b-carousel>
+      <b-navbar toggleable="lg" class="menu-navbar flex-wrap border-bottom-black">
+        <b-navbar-nav pills class="flex-wrap justify-content-around align-items-center w-100">
+          <b-nav-item to="/menu/appetizers" class="mx-2">
+            Appetizers
+          </b-nav-item>
+          <b-nav-item to="/menu/sides" class="mx-2">
+            Soups&nbsp;&amp;&nbsp;Sides
+          </b-nav-item>
+          <b-nav-item to="/menu/specials" class="mx-2">
+            Specials
+          </b-nav-item>
+          <b-nav-item to="/menu/entrees" class="mx-2">
+            Entr&eacute;es
+          </b-nav-item>
+          <b-nav-item to="/menu/sushi" class="mx-2">
+            Sushi
+          </b-nav-item>
+        </b-navbar-nav>
+      </b-navbar>
+    </header>
     <b-overlay :show="menuLoading" bg-color="#aca286" rounded no-center>
-      <header>
-        <b-carousel
-          id="menu-carousel"
-          :value="menuBanner"
-          img-height="374"
-          label-next=""
-          label-prev=""
-          fade
-        >
-          <b-carousel-slide >
-            <template #img>
-              <img
-                src="../assets/banners/appetizers-banner.jpg"
-                alt="Appetizers Menu banner"
-              >
-            </template>
-          </b-carousel-slide>
-          <b-carousel-slide >
-            <template #img>
-              <img
-                src="../assets/banners/entrees-banner.jpg"
-                alt="Entrees Menu banner"
-              >
-            </template>
-          </b-carousel-slide>
-          <b-carousel-slide >
-            <template #img>
-              <img
-                src="../assets/banners/sides-banner.jpg"
-                alt="Sides Menu banner"
-              >
-            </template>
-          </b-carousel-slide>
-          <b-carousel-slide >
-            <template #img>
-              <img
-                src="../assets/banners/specials-banner.jpg"
-                alt="Specials Menu banner"
-              >
-            </template>
-          </b-carousel-slide>
-          <b-carousel-slide >
-            <template #img>
-              <img
-                src="../assets/banners/sushi-banner.jpg"
-                alt="Sushi Menu banner"
-              >
-            </template>
-          </b-carousel-slide>
-        </b-carousel>
-        <b-navbar toggleable="md" class="menu-navbar border-bottom-black">
-          <b-navbar-nav pills class="flex-wrap justify-content-around align-items-center w-100">
-            <b-nav-item to="/menu/appetizers" class="mx-2">
-              Appetizers
-            </b-nav-item>
-            <b-nav-item to="/menu/sides" class="mx-2">
-              Soups&nbsp;&amp;&nbsp;Sides
-            </b-nav-item>
-            <b-nav-item to="/menu/specials" class="mx-2">
-              Specials
-            </b-nav-item>
-            <b-nav-item to="/menu/entrees" class="mx-2">
-              Entr&eacute;es
-            </b-nav-item>
-            <b-nav-item to="/menu/sushi" class="mx-2">
-              Sushi
-            </b-nav-item>
-          </b-navbar-nav>
-        </b-navbar>
-      </header>
+      
       <main>
         <div class="menu-content">
           <transition name="fade">
@@ -170,18 +170,12 @@ export default {
 </script>
 
 <style scoped>
-.menu-page .banner-container {
-  position: relative;
+.menu-page {
+  min-height: 110vh;
 }
 
-.menu-page .banner-container .menu-banner {
-  position: relative;
-  transition: 0.5s opacity linear;
-  opacity: 1;  
-}
-
-.menu-page .banner-container .menu-banner.is-hidden {
-  opacity: 0;
+.menu-page .banner #menu-carousel .carousel-item img {
+  width: 100%;
 }
 
 .menu-navbar {
@@ -189,16 +183,22 @@ export default {
   align-items: center;
   justify-content: space-around;
 }
+@media only screen and (max-width: 992px) {
+  .menu-navbar {
+    display: none;
+  }
+}
 
 .menu-navbar .navbar-nav .nav-item {
-  width: 150px;
+  width: 17%;
   text-align: center;
-  line-height: 16px;
+  line-height: 1em;
 }
 
 .menu-navbar .navbar-nav .nav-link {
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0.25em;
+  transition: 0.3s border-color ease;
 }
 
 .menu-navbar .navbar-nav .nav-link.router-link-active,
@@ -209,6 +209,10 @@ export default {
 
 .menu-page .menu-content {
   padding: 0 1em;
+}
+
+.menu-page .menu-content {
+
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -226,5 +230,17 @@ export default {
   /* min-height: 35em; */
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 992px) {
+  .menu-navbar .navbar-nav .nav-item .nav-link {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .menu-navbar .navbar-nav .nav-item .nav-link.router-link-active {
+    border-color: rgba(0, 0, 0, 0.5);
+  }
+  .menu-navbar .navbar-nav .nav-item:not(:last-child) {
+    margin-bottom: 0.25em;
+  }
 }
 </style>

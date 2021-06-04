@@ -3,10 +3,9 @@
 
     <header>
       <router-link to="/">
-        <img alt="Ching Asian Bistro" src="./assets/logo/chingasianbistro.png">
+        <img alt="Ching Asian Bistro" class="logo desktop" src="./assets/logo/chingasianbistro.png">
       </router-link>
-      <b-navbar sticky toggleable="sm" type="dark" class="mx-auto main-navbar">
-        
+      <b-navbar toggleable="sm" type="dark" class="mx-auto main-navbar">
         <b-navbar-toggle target="main-navbar-collapse" />
         <b-collapse id="main-navbar-collapse" is-nav>
           <b-navbar-nav fill tabs class="justify-space-between w-100">
@@ -25,17 +24,30 @@
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
+
+      <div class="mobile-navbar">
+        <button @click="openSidebar" class="navbar-toggler sidebar-toggler collapsed">
+          <span class="navbar-toggler-icon" />
+        </button>
+        <router-link to="/">
+          <img alt="Ching Asian Bistro" class="logo mobile" src="./assets/logo/chingasianbistro.png">
+        </router-link>
+      </div>
     </header>
 
     <main role="main">
       <div class="bg-main mx-auto mb-3 p-1 main-container">
         <b-overlay :show="pageLoading" bg-color="#aca286" rounded no-center>
           <transition name="fade" mode="out-in">
-            <router-view class="page-content-router" />
+            <router-view id="page-content-router" />
           </transition>
         </b-overlay>
       </div>
     </main>
+
+    <Sidebar v-model="sidebarOpen">
+
+    </Sidebar>
 
     <footer>
       <b-container>
@@ -121,6 +133,7 @@
 
 <script>
 import { BIcon, BIconFacebook } from "bootstrap-vue";
+import Sidebar from "./Sidebar.vue";
 
 export default {
   name: 'App',
@@ -128,12 +141,14 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     BIcon,
     BIconFacebook,
+    Sidebar,
   },
   data() {
     return {
       scrollTimeout: 0,
       scrollY: 0,
       pageLoading: true,
+      sidebarOpen: false,
     }
   },
   computed: {
@@ -174,9 +189,32 @@ export default {
     onLoad() {
       this.pageLoading = false;
     },
+    openSidebar() {
+      this.sidebarOpen = true;
+    },
+    closeSidebar() {
+      this.sidebarOpen = false;
+    }
   },
 }
 </script>
+
+<style scoped>
+@media only screen and (min-width: 480px) and (max-width: 992px) {
+  #app main {
+    margin-top: 100px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #app main {
+    margin-top: 82px;
+  }
+  #app main .main-container {
+    width: 100%;
+  }
+
+}
+</style>
 
 <style>
 #app {
@@ -193,6 +231,10 @@ body {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #root {
   
 }
@@ -203,11 +245,11 @@ body {
 
 #scrollToTopButton {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 8px 12px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 4px;
+  bottom: 0.75em;
+  right: 0.75em;
+  padding: 0.5em 0.75em;
+  border: 0.125em solid rgba(255, 255, 255, 0.5);
+  border-radius: 0.25em;
 }
 
 /*
@@ -218,38 +260,95 @@ body {
   color: #aca286;
   max-width: calc(870px + 0.5em);
 }
-
+@media only screen and (max-width: 992px) {
+  .main-navbar {
+    display: none;
+  }
+  .logo.desktop {
+    display: none;
+  }
+}
 .main-navbar .navbar-nav {
   border-color: 1px solid #aca286;
 }
-
-.main-navbar .navbar-nav .nav-link {
+.main-navbar .navbar-nav .nav-item:not(:last-child) {
+  margin-right: 3em;
+}
+.main-navbar .navbar-nav .nav-item .nav-link {
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 1px solid rgba(172, 162, 134, 0.3);
+  transition: 0.3s border-color ease;
   color: #aca286;
   border-radius: 4px;
 }
 
-.main-navbar .navbar-nav .nav-item:not(:last-child) {
-  margin-right: 4px;
-}
-
-.main-navbar .navbar-nav .nav-link.router-link-active {
+.main-navbar .navbar-nav .nav-item .nav-link.router-link-active {
   border-color: #aca286;
   /* text-decoration: underline; */
 }
 
-.main-navbar .navbar-nav .nav-link:hover {
+.main-navbar .navbar-nav .nav-item .nav-link:hover {
   border-color: #aca286;
+}
+
+.main-navbar .navbar-nav .nav-item .nav-link h5 {
+  margin-bottom: 0.125em;
 }
 
 .footer-nav .nav-link {
   padding: 0;
   padding-bottom: 4px;
 }
-
 .social-icon {
   font-size: 32px;
+}
+
+/*
+  Mobile "Navbar"
+*/
+.mobile-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  min-height: 5em;
+}
+@media only screen and (min-width: 992px) {
+  .mobile-navbar {
+    display: none;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 992px) {
+  .mobile-navbar .logo.mobile {
+    width: 240px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mobile-navbar .logo.mobile {
+    width: 200px;
+  }
+}
+.mobile-navbar .sidebar-toggler {
+  color: rgba(255, 255, 255, 0.5);
+  border: 0.125em solid rgba(255, 255, 255, 0.5);
+  padding: 0.5em 0.75em;
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+}
+.mobile-navbar .sidebar-toggler > span {
+  color: #aca286;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.mobile-navbar .logo-container {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.mobile-navbar .logo.mobile {
+  height: auto;
 }
 
 /*
@@ -259,6 +358,7 @@ body {
 .main-container {
   position: relative;
   max-width: calc(870px + 0.5em);
+  width: 85%;
   /* min-height: 300px; */
 }
 
@@ -307,20 +407,24 @@ footer {
   border-bottom: 1px solid #000000;
 }
 
-/* 
-  Transitions
+/*
+  Content
 */
-.fade-enter-active, .fade-leave-active {
+#page-content-router > *:not(.banner) {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#page-content-router.fade-enter-active, #page-content-router.fade-leave-active {
   transition: 0.25s opacity linear;
 }
 
-.fade-enter-active {
+#page-content-router.fade-enter-active {
   transition-delay: 0;
 }
 
-.fade-enter, .fade-leave-to {
+#page-content-router.fade-enter, #page-content-router.fade-leave-to {
   opacity: 0;
-  
+  min-height: 110vh;
 }
-
 </style>

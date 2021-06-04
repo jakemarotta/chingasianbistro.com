@@ -1,38 +1,40 @@
 <template>
   <div class="menu-entrees">
-    <b-nav pills class="shortcuts flex-wrap justify-content-around align-items-center w-100">
-      <b-nav-item href="#lunch" class="mx-2">
-        Lunch
-      </b-nav-item>
-      <b-nav-item href="#beef" class="mx-2">
-        Beef
-      </b-nav-item>
-      <b-nav-item href="#pork" class="mx-2">
-        Pork
-      </b-nav-item>
-      <b-nav-item href="#vegetable" class="mx-2">
-        Vegetable
-      </b-nav-item>
-      <b-nav-item href="#seafood" class="mx-2">
-        Seafood
-      </b-nav-item>
-      <b-nav-item href="#chicken" class="mx-2">
-        Chicken
-      </b-nav-item>
-    </b-nav>
+    <b-navbar toggleable="md" class="shortcuts flex-wrap">
+      <b-navbar-nav pills class="flex-wrap justify-content-around align-items-center w-100">
+        <b-nav-item href="#lunch" class="mx-2">
+          Lunch
+        </b-nav-item>
+        <b-nav-item href="#beef" class="mx-2">
+          Beef
+        </b-nav-item>
+        <b-nav-item href="#pork" class="mx-2">
+          Pork
+        </b-nav-item>
+        <b-nav-item href="#vegetable" class="mx-2">
+          Vegetable
+        </b-nav-item>
+        <b-nav-item href="#seafood" class="mx-2">
+          Seafood
+        </b-nav-item>
+        <b-nav-item href="#chicken" class="mx-2">
+          Chicken
+        </b-nav-item>
+      </b-navbar-nav>
+    </b-navbar>
 
     <div class="lunch-specials mt-3">  
-      <div>
-        <h4 className="text-center"><a id="lunch"></a>Lunch Menu Specials</h4>
-        <h6 className="text-center">Served from {{menu.entrees.lunchSchedule.startTime}} - {{menu.entrees.lunchSchedule.endTime}}, Tue - Sat</h6>
-        <h6 className="text-center">Served from {{menu.entrees.lunchSchedule.sundayStartTime}} - {{menu.entrees.lunchSchedule.sundayEndTime}}, Sun</h6>
-        <h6 className="text-center">All lunches priced at {{menu.entrees.lunchSchedule.price}}</h6>
+      <div class="mb-3">
+        <h4 class="text-center"><a id="lunch"></a>Lunch Menu Specials</h4>
+        <h6 class="text-center">Served from {{menu.entrees.lunchSchedule.startTime}} - {{menu.entrees.lunchSchedule.endTime}}, Tue - Sat</h6>
+        <h6 class="text-center">Served from {{menu.entrees.lunchSchedule.sundayStartTime}} - {{menu.entrees.lunchSchedule.sundayEndTime}}, Sun</h6>
+        <h6 class="text-center">All lunches priced at {{menu.entrees.lunchSchedule.price}}</h6>
       </div>
 
-      <div className="d-flex flex-wrap justify-content-center align-items-center text-center px-4 mb-3">
-        <div>
-          <span 
-            className="mx-3"
+      <div class="d-flex flex-wrap justify-content-center align-items-center text-center px-4 mb-3">
+        <div class="lunch-list">
+          <div 
+            class="lunch-list-item mx-3"
             v-for="(item, index) in menu.entrees.lunchList" 
             :key="`lunch_list_item_${index}`"
           >
@@ -41,12 +43,12 @@
               v-if="item.spicy"
               src="../../assets/menu/hotpepper.png"
               alt="Hot &amp; Spicy"
-              className="ml-1 mb-1"
+              class="ml-1 mb-1"
             />
-          </span>
+          </div>
         </div>
       </div>
-      <div className="container px-5">
+      <div>
         <MenuItem
           v-for="(option, index) in menu.entrees.lunchOptions"
           :key="`lunch_option_${index}`"
@@ -113,7 +115,16 @@ export default {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: underline;
 }
+@media only screen and (max-width: 992px) {
+  .menu-entrees .shortcuts {
+    display: none;
+  }
+}
 .menu-entrees .lunch-specials {
   padding: 0 1em;
+}
+.menu-entrees .lunch-specials .lunch-list .lunch-list-item {
+  white-space: nowrap;
+  display: inline-block;
 }
 </style>
