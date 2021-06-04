@@ -4,6 +4,7 @@
       fluid 
       src="../assets/banners/about-banner.jpg" 
       class="d-block mb-2"
+      height="300"
     />
     
     <HoursOfOperation class="mx-5 mb-4" />

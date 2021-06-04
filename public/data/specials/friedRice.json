@@ -2,14 +2,14 @@
   {
     "title": "Choice of Chicken, Pork, or Vegetable",
     "description": "",
-    "price": "$9.90",
+    "price": "$9.95",
     "type": "fried-rice",
     "spicy": false
   },
   {
     "title": "Choice of Beef, Shrimp, or Combo",
     "description": "",
-    "price": "$11.50",
+    "price": "$11.95",
     "type": "fried-rice",
     "spicy": false
   }

@@ -2,63 +2,63 @@
   {
     "title": "Wonton Soup",
     "description": "",
-    "price": "$3.25",
+    "price": "$3.95",
     "type": "soup",
     "spicy": false
   },
   {
     "title": "Hot & Sour Soup",
     "description": "",
-    "price": "$3.25",
+    "price": "$3.95",
     "type": "soup",
     "spicy": true
   },
   {
     "title": "Egg Drop Soup",
     "description": "",
-    "price": "$3.25",
+    "price": "$3.95",
     "type": "soup",
     "spicy": false
   },
   {
     "title": "San Shien Soup (For 2)",
     "description": "",
-    "price": "$9.50",
+    "price": "$10.95",
     "type": "soup",
     "spicy": false
   },
   {
     "title": "Wonton Vegetable Soup (For 2)",
     "description": "",
-    "price": "$9.50",
+    "price": "$10.95",
     "type": "soup",
     "spicy": false
   },
   {
     "title": "Tofu Vegetable Soup (For 2)",
     "description": "",
-    "price": "$9.50",
+    "price": "$10.95",
     "type": "soup",
     "spicy": false
   },
   {
     "title": "Chicken & Corn Soup (For 2)",
     "description": "",
-    "price": "$9.50",
+    "price": "$10.95",
     "type": "soup",
     "spicy": false
   },
   {
     "title": "Sauteed Seafood Soup (For 2)",
     "description": "",
-    "price": "$10.50",
+    "price": "$11.95",
     "type": "soup",
     "spicy": false
   },
   {
     "title": "Hot & Sour Seafood Soup (For 2)",
     "description": "",
-    "price": "$10.50",
+    "price": "$11.95",
     "type": "soup",
     "spicy": true
   }

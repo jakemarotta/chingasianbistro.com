@@ -2,35 +2,35 @@
   {
     "title": "California Roll",
     "description": "",
-    "price": "$5.25",
+    "price": "$5.95",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Spicy Salmon Roll",
     "description": "",
-    "price": "$6.25",
+    "price": "$6.95",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Spicy Shrimp Roll",
     "description": "",
-    "price": "$6.25",
+    "price": "$6.95",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Spicy Tuna Roll",
     "description": "",
-    "price": "$6.75",
+    "price": "$7.50",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Tuna Roll",
     "description": "",
-    "price": "$6.00",
+    "price": "$6.50",
     "type": "maki",
     "spicy": false
   },
@@ -44,140 +44,140 @@
   {
     "title": "Salmon Roll",
     "description": "",
-    "price": "$5.50",
+    "price": "$6.95",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Shrimp Roll",
     "description": "",
-    "price": "$5.75",
+    "price": "$6.25",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Eel Roll",
     "description": "",
-    "price": "$6.50",
+    "price": "$7.00",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Eel and Avocado Roll",
     "description": "",
-    "price": "$7.00",
+    "price": "$7.50",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Eel and Cucumber Roll",
     "description": "",
-    "price": "$7.00",
+    "price": "$7.50",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Avocado Roll",
     "description": "",
-    "price": "$5.25",
+    "price": "$5.95",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Cucumber Roll",
     "description": "",
-    "price": "$5.00",
+    "price": "$5.75",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Alaska Roll",
     "description": "",
-    "price": "$6.95",
+    "price": "$7.50",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Vegetable Roll",
     "description": "",
-    "price": "$5.95",
+    "price": "$6.50",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Asparagus Roll",
     "description": "",
-    "price": "$5.75",
+    "price": "$6.00",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Spider Roll",
     "description": "Soft Shell Crab, Cucumber, SP Sauce",
-    "price": "$9.95",
+    "price": "$10.25",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Shrimp Tempura Roll (Spicy Sauce)",
     "description": "",
-    "price": "$6.00",
+    "price": "$6.50",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Asparagus Tempura Roll (Spicy Sauce)",
     "description": "",
-    "price": "$5.95",
+    "price": "$6.50",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Sun Roll",
     "description": "",
-    "price": "$9.95",
+    "price": "$10.25",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Mistake Roll",
     "description": "",
-    "price": "$8.00",
+    "price": "$8.50",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Orange Crush Roll",
     "description": "Asp Tempura, Salmon, Bonito, W Sauce",
-    "price": "$15.00",
+    "price": "$17.00",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Spider-Man Roll",
     "description": "Softshell Crab, cuke, hot peppers, ponzu",
-    "price": "$15.00",
+    "price": "$16.00",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Dragon Roll",
     "description": "Eel, Cuke, Avocado, Shrimp on Top",
-    "price": "$15.00",
+    "price": "$16.00",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Rainbow Roll",
     "description": "",
-    "price": "$15.00",
+    "price": "$16.00",
     "type": "maki",
     "spicy": false
   },
   {
     "title": "Hot Chick Roll",
     "description": "",
-    "price": "$15.00",
+    "price": "$17.00",
     "type": "maki",
     "spicy": false
   }

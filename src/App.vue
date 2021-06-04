@@ -31,7 +31,7 @@
       <div class="bg-main mx-auto mb-3 p-1 main-container">
         <b-overlay :show="pageLoading" bg-color="#aca286" rounded no-center>
           <transition name="fade" mode="out-in">
-            <router-view />
+            <router-view class="page-content-router" />
           </transition>
         </b-overlay>
       </div>
@@ -315,11 +315,12 @@ footer {
 }
 
 .fade-enter-active {
-  /* transition-delay: .25s; */
+  transition-delay: 0;
 }
 
 .fade-enter, .fade-leave-to {
-  opacity: 0
+  opacity: 0;
+  
 }
 
 </style>

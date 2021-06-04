@@ -2,56 +2,63 @@
   {
     "title": "Shrimp and Teriyaki Steak",
     "description": "Grilled shrimp and steak glazed with teriyaki sauce and served with steamed vegetables.",
-    "price": "$15.95",
+    "price": "$16.95",
     "type": "specialty",
     "spicy": false 
   },
   {
     "title": "Five-Flavored Seafood and Steak",
     "description": "Crab meat, scallop, shrimp, and grilled steak with fresh vegetables in a five-flavored sauce.",
-    "price": "$17.95",
+    "price": "$18.95",
     "type": "specialty",
     "spicy": true 
   },
   {
     "title": "Happy Family",
     "description": "Shrimp, scallop, crab meat, beef, chicken, pork, with fresh vegetables sauteed in a brown sauce.",
-    "price": "$16.95",
+    "price": "$17.95",
     "type": "specialty",
     "spicy": false 
   },
   {
+    "title": "Shrimp & Chicken with Cashews",
+    "description": "",
+    "price": "15.95",
+    "type": "specialty",
+    "spicy": false
+  },
+  {
     "title": "Five-Flavored Scallop and Beef",
     "description": "Scallops, beef, and vegetables sauteed in five-flavored sauce.",
-    "price": "$17.95",
+    "price": "$18.95",
     "type": "specialty",
     "spicy": true 
   },
   {
     "title": "Sweet & Sour Combination",
     "description": "A treat for sweet and sour lovers. Grace yourself on a combination of chicken, pork and shrimp.",
-    "price": "$14.95",
+    "price": "$15.95",
     "type": "specialty",
     "spicy": false 
   },
   {
     "title": "Tsoa San Shein",
     "description": "Shrimp, chicken and beef sauteed with vegetables in a brown sauce.",
-    "price": "$14.95",
+    "price": "$15.95",
     "type": "specialty",
     "spicy": false 
   },
   {
     "title": "Triple Crown",
     "description": "Shrimp, chicken and beef sauteed with vegetables in a five-flavored sauce.",
-    "price": "$14.95",
+    "price": "$15.95",
     "type": "specialty",
     "spicy": true 
   },
   {
     "title": "Beef and Chicken Hunan Style",
     "description": "Sliced beef and chicken sauteed with vegetables in a brown sauce.",
-    "price": "$13.95",
+    "price": "$15.95",
     "type": "specialty",
     "spicy": true
   }

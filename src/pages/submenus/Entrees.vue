@@ -113,4 +113,7 @@ export default {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: underline;
 }
+.menu-entrees .lunch-specials {
+  padding: 0 1em;
+}
 </style>

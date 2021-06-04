@@ -72,19 +72,23 @@
         </b-navbar>
       </header>
       <main>
-        <transition name="fade">
-          <router-view />
-        </transition>
+        <div class="menu-content">
+          <transition name="fade">
+            <router-view ref="contentRouterView" />
+          </transition>
+        </div>
       </main>
     </b-overlay>
   </div>
 </template>
 
 <script>
+import smoothReflow from "vue-smooth-reflow";
 import fetchMenu from "../utils/fetchMenu";
 
 export default {
   name: "Menu",
+  mixins: [smoothReflow],
   data() {
     return {
       menuLoading: true,
@@ -156,6 +160,11 @@ export default {
       Object.assign(this.menu, menu);
       this.$nextTick(() => this.menuLoading = false);
     });
+  },
+  mounted() {
+    // this.$smoothReflow({
+    //   el: this.refs.$contentRouterView,
+    // });
   }
 }
 </script>
@@ -198,6 +207,10 @@ export default {
   border: 1px solid rgba(0, 0, 0, 0.5)
 }
 
+.menu-page .menu-content {
+  padding: 0 1em;
+}
+
 .fade-enter-active, .fade-leave-active {
   transition: 0.25s opacity linear;
   opacity: 1;
@@ -208,6 +221,10 @@ export default {
 }
 
 .fade-enter, .fade-leave-to {
-  opacity: 0
+  opacity: 0;
+  /* hides flickering beneath screen bounds */
+  /* min-height: 35em; */
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
 }
 </style>

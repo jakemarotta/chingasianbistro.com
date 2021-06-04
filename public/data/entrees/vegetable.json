@@ -2,28 +2,28 @@
   {
     "title": "Ma Po Tofu",
     "description": "Szechnan's famous dish, silken tofu with minced water chestnuts, onions, mushrooms in Chinese hot sauce.",
-    "price": "$10.25",
+    "price": "$10.95",
     "type": "vegetable",
     "spicy": true
   },
   {
     "title": "Vegetarian's Paradise",
     "description": "Fresh vegetables stir-fried in white sauce or steamed.",
-    "price": "$8.95",
+    "price": "$9.95",
     "type": "vegetable",
     "spicy": false
   },
   {
     "title": "Fried Tofu with Vegetables",
     "description": "Crispy fried silken tofu with fresh vegetables in brown sauce.",
-    "price": "$10.25",
+    "price": "$10.95",
     "type": "vegetable",
     "spicy": false
   },
   {
     "title": "Stir-Fried Green Bean",
     "description": "Tossed with scallions in garlic soy sauce.",
-    "price": "$8.95",
+    "price": "$9.95",
     "type": "vegetable",
     "spicy": false
   }

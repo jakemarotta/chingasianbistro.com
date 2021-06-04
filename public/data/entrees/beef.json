@@ -2,63 +2,63 @@
   {
     "title": "Orange Steak",
     "description": "Crispy beef tossed with vegetables in classic orange sauce.",
-    "price": "$15.95",
+    "price": "$16.95",
     "type": "beef",
     "spicy": true
   },
   {
     "title": "Five-Flavored Steak",
     "description": "Sliced tender beef sauteed with vegetables in five-flavored sauce.",
-    "price": "$12.95",
+    "price": "$13.95",
     "type": "beef",
     "spicy": true
   },
   {
     "title": "Beef with Broccoli",
     "description": "Fresh broccoli sauteed with sliced tender beef in brown sauce.",
-    "price": "$12.95",
+    "price": "$13.95",
     "type": "beef",
     "spicy": false
   },
   {
     "title": "Teriyaki Steak",
     "description": "Grilled steak glazed with the teriyaki sauce and served with steamed vegetables.",
-    "price": "$15.95",
+    "price": "$13.95",
     "type": "beef",
     "spicy": false
   },
   {
     "title": "Green Pepper Steak",
     "description": "Grilled steak glazed with the teriyaki sauce and served with steamed vegetables.",
-    "price": "$12.95",
+    "price": "$13.95",
     "type": "beef",
     "spicy": false
   },
   {
     "title": "Mongolian Beef",
     "description": "Sliced tender beef with scallions, onions, and bamboo shoots sauteed with hoisin sauce.",
-    "price": "$12.95",
+    "price": "$13.95",
     "type": "beef",
     "spicy": false
   },
   {
     "title": "Kung Pao Beef",
     "description": "A quick fired traditional dish with peanuts, chili peppers, and vegetables.",
-    "price": "$12.95",
+    "price": "$13.95",
     "type": "beef",
     "spicy": true
   },
   {
     "title": "Beef with Vegetables",
     "description": "Sliced tender beef sauteed with fresh vegetables in brown sauce.",
-    "price": "$12.95",
+    "price": "$13.95",
     "type": "beef",
     "spicy": false
   },
   {
     "title": "Beef Delight",
     "description": "Snow peas, mushrooms, water chestnuts, bamboo shoots, and zucchini in brown sauce.",
-    "price": "$12.95",
+    "price": "$13.95",
     "type": "beef",
     "spicy": false
   }

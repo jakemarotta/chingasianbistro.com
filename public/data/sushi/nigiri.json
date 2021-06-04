@@ -2,42 +2,42 @@
   {
     "title": "Tuna (Maguro)",
     "description": "",
-    "price": "$6.00",
+    "price": "$6.50",
     "type": "nigiri",
     "spicy": false
   },
   {
     "title": "Salmon (Sake)",
     "description": "",
-    "price": "$5.25",
+    "price": "$5.95",
     "type": "nigiri",
     "spicy": false
   },
   {
     "title": "Yellowtail (Hamachi)",
     "description": "",
-    "price": "$6.50",
+    "price": "$7.00",
     "type": "nigiri",
     "spicy": false
   },
   {
     "title": "Shrimp (Ebi)",
     "description": "",
-    "price": "$5.00",
+    "price": "$5.75",
     "type": "nigiri",
     "spicy": false
   },
   {
     "title": "Crab (Kani)",
     "description": "",
-    "price": "$4.95",
+    "price": "$5.75",
     "type": "nigiri",
     "spicy": false
   },
   {
     "title": "Eel (Unagi)",
     "description": "",
-    "price": "$6.50",
+    "price": "$7.00",
     "type": "nigiri",
     "spicy": false
   }

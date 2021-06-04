@@ -2,21 +2,21 @@
   {
     "title": "House Salad",
     "description": "Romaine lettuce and sliced avocado topped with our misoyaki dressing.",
-    "price": "$4.95",
+    "price": "$5.95",
     "type": "salad",
     "spicy": false
   },
   {
     "title": "-- with Chicken",
     "description": "",
-    "price": "$11.95",
+    "price": "$12.95",
     "type": "salad",
     "spicy": false
   },
   {
     "title": "-- with Shrimp",
     "description": "",
-    "price": "$13.95",
+    "price": "$14.95",
     "type": "salad",
     "spicy": false
   }
