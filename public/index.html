@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="./icon.ico" />
+    <link rel="icon" href="./icon.png" id="light-icon" />
+    <link rel="icon" href="./icon-dark.png" id="dark-icon" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -17,4 +18,20 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="app"></div>
   </body>
+  <script>
+    const matcher = window.matchMedia('(prefers-color-scheme: dark)');
+    lightIcon = document.querySelector('link#light-icon');
+    darkIcon = document.querySelector('link#dark-icon');
+    function onUpdate() {
+      if (matcher.matches) {
+        document.head.append(darkIcon);
+        lightIcon.remove();
+      } else {
+        document.head.append(lightIcon);
+        darkIcon.remove();
+      }
+    }
+    matcher.addListener(onUpdate);
+    onUpdate();
+  </script>
 </html>

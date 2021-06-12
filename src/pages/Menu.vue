@@ -6,6 +6,7 @@
         :value="menuBanner"
         label-next=""
         label-prev=""
+        img-height="300"
         fade
       >
         <b-carousel-slide >
@@ -13,6 +14,7 @@
             <img
               src="../assets/banners/appetizers-banner.jpg"
               alt="Appetizers Menu banner"
+              height="300"
             >
           </template>
         </b-carousel-slide>
@@ -21,6 +23,7 @@
             <img
               src="../assets/banners/entrees-banner.jpg"
               alt="Entrees Menu banner"
+              height="300"
             >
           </template>
         </b-carousel-slide>
@@ -29,6 +32,7 @@
             <img
               src="../assets/banners/sides-banner.jpg"
               alt="Sides Menu banner"
+              height="300"
             >
           </template>
         </b-carousel-slide>
@@ -37,6 +41,7 @@
             <img
               src="../assets/banners/specials-banner.jpg"
               alt="Specials Menu banner"
+              height="300"
             >
           </template>
         </b-carousel-slide>
@@ -45,6 +50,7 @@
             <img
               src="../assets/banners/sushi-banner.jpg"
               alt="Sushi Menu banner"
+              height="300"
             >
           </template>
         </b-carousel-slide>
@@ -176,6 +182,8 @@ export default {
 
 .menu-page .banner #menu-carousel .carousel-item img {
   width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
 .menu-navbar {

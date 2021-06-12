@@ -116,14 +116,26 @@ export default {
 
 <style>
 #main-sidebar.bg-custom {
-  background-color: #aca286;
+  background: rgb(115,103,71);
+  background: linear-gradient(0deg, rgba(115,103,71,1) 0%, rgba(172,162,134,1) 76%, rgba(172,162,134,1) 100%);
 }
 #main-sidebar .nav-link {
   padding: 0;
 }
+#main-sidebar .nav-link button {
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(0, 0, 0, 0.3);
+   text-decoration-color: rgba(0, 0, 0, 0.3);
+}
+#main-sidebar .nav-link button:hover {
+   -webkit-text-decoration-color: rgba(0, 0, 0, 0.6);
+   text-decoration-color: rgba(0, 0, 0, 0.6);
+}
 #main-sidebar > .b-sidebar-body > .wrapper > .nav > .nav-link button {
   font-size: 2em;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.7);
+  /* box-shadow: 0 55px 0 0 rgba(0, 0, 0, 0.4); */
+  
 }
 #main-sidebar .submenu {
   margin-left: 2em;

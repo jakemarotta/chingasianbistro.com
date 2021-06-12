@@ -6,6 +6,7 @@
       :interval="3000"
       label-next=""
       label-prev=""
+      img-height="300"
       controls
       indicators
     >
@@ -13,8 +14,9 @@
         <template #img>
           <img
             class=""
-            src="../assets/carousel/image1.jpg"
+            src="../assets/banners/entrees-banner.jpg"
             alt="carousel-image-1"
+            height="300"
           >
         </template>
       </b-carousel-slide>
@@ -22,8 +24,9 @@
         <template #img>
           <img
             class=""
-            src="../assets/carousel/image2.jpg"
+            src="../assets/banners/sushi-banner.jpg"
             alt="carousel-image-2"
+            height="300"
           >
         </template>
       </b-carousel-slide>
@@ -31,8 +34,9 @@
         <template #img>
           <img
             class=""
-            src="../assets/carousel/image3.jpg"
+            src="../assets/banners/specials-banner.jpg"
             alt="carousel-image-3"
+            height="300"
           >
         </template>
       </b-carousel-slide>
@@ -40,8 +44,9 @@
         <template #img>
           <img
             class=""
-            src="../assets/carousel/image4.jpg"
+            src="../assets/banners/bowl-banner.jpg"
             alt="carousel-image-4"
+            height="300"
           >
         </template>
       </b-carousel-slide>
@@ -49,8 +54,9 @@
         <template #img>
           <img
             class=""
-            src="../assets/carousel/image5.jpg"
+            src="../assets/banners/noodle-banner.jpg"
             alt="carousel-image-5"
+            height="300"
           >
         </template>
       </b-carousel-slide>
@@ -58,8 +64,9 @@
         <template #img>
           <img
             class=""
-            src="../assets/carousel/image6.jpg"
+            src="../assets/banners/appetizers-banner.jpg"
             alt="carousel-image-6"
+            height="300"
           >
         </template>
       </b-carousel-slide>
@@ -67,8 +74,9 @@
         <template #img>
           <img
             class=""
-            src="../assets/carousel/image7.jpg"
+            src="../assets/banners/shumai-banner.jpg"
             alt="carousel-image-7"
+            height="300"
           >
         </template>
       </b-carousel-slide>
@@ -76,8 +84,9 @@
         <template #img>
           <img
             class=""
-            src="../assets/carousel/image8.jpg"
+            src="../assets/banners/fried-rice-banner.jpg"
             alt="carousel-image-8"
+            height="300"
           >
         </template>
       </b-carousel-slide>
@@ -88,13 +97,6 @@
 <script>
 export default {
   name: "Home",
-  data() {
-    const images = [];
-    for (let i = 1; i <= 8; i++) { images.push(`../assets/carousel/image${i+1}`) }
-    return {
-      images,
-    }
-  }
 }
 </script>
 
@@ -104,5 +106,7 @@ export default {
 }
 .home-page #home-carousel .carousel-item img {
   width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 </style>

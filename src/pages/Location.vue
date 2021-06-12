@@ -1,7 +1,7 @@
 <template>
   <div class="location-page content-page">
     <div class="image-wrapper banner">
-      <b-img fluid src="../assets/chingasianbistromap.jpg" height="528" class="banner d-block" />
+      <b-img src="../assets/chingasianbistromap.jpg" height="528" class="banner d-block" />
     </div>
   </div>
 </template>
@@ -17,11 +17,12 @@ export default {
   min-height: 60.828%;
 }
 
-.location-page .image-container {
-
+.location-page .image-wrapper {
+  position: relative;
 }
 
-.location-page .image-container img {
-
+.location-page .image-wrapper img {
+  width: 100%;
+  height: auto;
 }
 </style>
