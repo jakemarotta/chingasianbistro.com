@@ -9,10 +9,24 @@
         img-height="300"
         fade
       >
-        <b-carousel-slide >
+        <b-carousel-slide
+          v-for="(src, key, index) in banners"
+          :key="`menu-carousel-item-${index}`"
+        >
           <template #img>
             <img
-              src="../assets/banners/appetizers-banner.jpg"
+              :src="src"
+              :alt="`${key} menu banner`"
+              height="300"
+              :class="showBanner ? 'show' : 'hide'" 
+              @load="showBanner = true"
+            >
+          </template>
+        </b-carousel-slide>
+        <!-- <b-carousel-slide >
+          <template #img>
+            <img
+              :src="images.appetizers"
               alt="Appetizers Menu banner"
               height="300"
             >
@@ -53,7 +67,7 @@
               height="300"
             >
           </template>
-        </b-carousel-slide>
+        </b-carousel-slide> -->
       </b-carousel>
       <b-navbar toggleable="lg" class="menu-navbar flex-wrap border-bottom-black">
         <b-navbar-nav pills class="flex-wrap justify-content-around align-items-center w-100">
@@ -89,14 +103,28 @@
 </template>
 
 <script>
-import smoothReflow from "vue-smooth-reflow";
-import fetchMenu from "../utils/fetchMenu";
+import smoothReflow from "vue-smooth-reflow"
+import fetchMenu from "../utils/fetchMenu"
+
+const banners = {
+  appetizers: undefined,
+  entrees: undefined,
+  sides: undefined,
+  specials: undefined,
+  sushi: undefined,
+}
+import(/* webpackPreload: true */ "../assets/banners/appetizers-banner.jpg").then(m => banners.appetizers = m.default);
+import(/* webpackPreload: true */ "../assets/banners/entrees-banner.jpg").then(m => banners.entrees = m.default);
+import(/* webpackPreload: true */ "../assets/banners/sides-banner.jpg").then(m => banners.sides = m.default);
+import(/* webpackPreload: true */ "../assets/banners/specials-banner.jpg").then(m => banners.specials = m.default);
+import(/* webpackPreload: true */ "../assets/banners/sushi-banner.jpg").then(m => banners.sushi = m.default);
 
 export default {
   name: "Menu",
   mixins: [smoothReflow],
   data() {
     return {
+      showBanner: false,
       menuLoading: true,
       menu: {
         appetizers: [],
@@ -134,13 +162,7 @@ export default {
           appetizers: [],
         },
       },
-      banners: {
-        appetizers: "../assets/banners/appetizers-banner.jpg",
-        entrees: "../assets/banners/entrees-banner.jpg",
-        sides: "../assets/banners/sides-banner.jpg",
-        specials: "../assets/banners/specials-banner.jpg",
-        sushi: "../assets/banners/sushi-banner.jpg",
-      }
+      banners,
     }
   },
   computed: {
@@ -180,9 +202,18 @@ export default {
   min-height: 110vh;
 }
 
+.menu-page .banner #menu-carousel .carousel-item {
+  position: relative;
+  padding-bottom: 34.4827586207%;
+  height: 0;
+}
+
 .menu-page .banner #menu-carousel .carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 4px;
 }
 

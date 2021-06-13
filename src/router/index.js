@@ -1,11 +1,5 @@
 import VueRouter from "vue-router";
 
-import Home from "../pages/Home.vue";
-import About from "../pages/About.vue";
-import Contact from "../pages/Contact.vue";
-import Location from "../pages/Location.vue";
-import Menu from "../pages/Menu.vue";
-
 import Appetizers from "../pages/submenus/Appetizers.vue";
 import Entrees from "../pages/submenus/Entrees.vue";
 import Sides from "../pages/submenus/Sides.vue";
@@ -14,51 +8,29 @@ import Sushi from "../pages/submenus/Sushi.vue";
 
 const routes = [
   {
-    path: "/about",
-    component: About,
+    path: "/menu/appetizers",
+    component: Appetizers,
   },
   {
-    path: "/contact",
-    component: Contact,
+    path: "/menu/entrees",
+    component: Entrees,
   },
   {
-    path: "/location",
-    component: Location,
+    path: "/menu/sides",
+    component: Sides,
+  },
+  {
+    path: "/menu/specials",
+    component: Specials,
+  },
+  {
+    path: "/menu/sushi",
+    component: Sushi,
   },
   {
     path: "/menu",
-    component: Menu,
-    children: [
-      {
-        path: "appetizers",
-        component: Appetizers,
-      },
-      {
-        path: "entrees",
-        component: Entrees,
-      },
-      {
-        path: "sides",
-        component: Sides,
-      },
-      {
-        path: "specials",
-        component: Specials,
-      },
-      {
-        path: "sushi",
-        component: Sushi,
-      },
-      {
-        path: "",
-        redirect: "entrees",
-      }
-    ]
-  },
-  {
-    path: "/",
-    component: Home,
-  },
+    redirect: "/menu/entrees",
+  }
 ];
 
 const router = new VueRouter({ 

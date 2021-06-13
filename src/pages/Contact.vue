@@ -1,6 +1,15 @@
 <template>
   <div class="contact-page content-page">
-    <b-img fluid src="../assets/banners/contact-banner.jpg" height="300px" class="banner d-block mb-2" />
+    <div class="image-wrapper">
+      <img 
+        fluid 
+        src="../assets/banners/contact-banner.jpg" 
+        height="300px" 
+        class="banner d-block mb-2" 
+        :class="showBanner ? 'show' : 'hide'" 
+        @load="showBanner = true"
+      />
+    </div>
 
     <HoursOfOperation class="mx-5 mb-4" />
 
@@ -111,6 +120,7 @@ export default {
         comments: ""
       },
       errors: {},
+      showBanner: false,
       sentSuccess: false,
       sentError: false,
       contactReasonOptions: [
@@ -213,7 +223,10 @@ export default {
 </script>
 
 <style scoped>
-.contact-form-input {
+.contact-page .contact-form-input {
   max-width: 400px;
+}
+.contact-page .image-wrapper {
+  padding-bottom: 34.4827586207%;
 }
 </style>

@@ -1,11 +1,15 @@
 <template>
   <div class="about-page content-page">
-    <b-img 
-      fluid 
-      src="../assets/banners/about-banner.jpg" 
-      class="banner d-block mb-2"
-      height="300"
-    />
+    <div class="image-wrapper">
+      <img 
+        fluid 
+        src="../assets/banners/about-banner.jpg" 
+        class="banner d-block mb-2"
+        height="300"
+        :class="showBanner ? 'show' : 'hide'" 
+        @load="showBanner = true"
+      />
+    </div>
     
     <HoursOfOperation class="mx-5 mb-4" />
     
@@ -38,8 +42,19 @@ import HoursOfOperation from "../components/HoursOfOperation";
 
 export default {
   name: "About",
+  data() {
+    return {
+      showBanner: false,
+    }
+  },
   components: {
     HoursOfOperation,
   },
 }
 </script>
+
+<style scoped>
+.about-page .image-wrapper {
+  padding-bottom: 34.4827586207%;
+}
+</style>

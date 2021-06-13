@@ -10,83 +10,18 @@
       controls
       indicators
     >
-      <b-carousel-slide >
+      <b-carousel-slide
+        v-for="(src, _, index) in images"
+        :key="`carousel-slide-${index}`"
+        img-height="300"
+      >
         <template #img>
           <img
-            class=""
-            src="../assets/banners/entrees-banner.jpg"
-            alt="carousel-image-1"
+            :src="src"
+            :alt="`carousel-image-${index}`"
             height="300"
-          >
-        </template>
-      </b-carousel-slide>
-      <b-carousel-slide >
-        <template #img>
-          <img
-            class=""
-            src="../assets/banners/sushi-banner.jpg"
-            alt="carousel-image-2"
-            height="300"
-          >
-        </template>
-      </b-carousel-slide>
-      <b-carousel-slide >
-        <template #img>
-          <img
-            class=""
-            src="../assets/banners/specials-banner.jpg"
-            alt="carousel-image-3"
-            height="300"
-          >
-        </template>
-      </b-carousel-slide>
-      <b-carousel-slide >
-        <template #img>
-          <img
-            class=""
-            src="../assets/banners/bowl-banner.jpg"
-            alt="carousel-image-4"
-            height="300"
-          >
-        </template>
-      </b-carousel-slide>
-      <b-carousel-slide >
-        <template #img>
-          <img
-            class=""
-            src="../assets/banners/noodle-banner.jpg"
-            alt="carousel-image-5"
-            height="300"
-          >
-        </template>
-      </b-carousel-slide>
-      <b-carousel-slide >
-        <template #img>
-          <img
-            class=""
-            src="../assets/banners/appetizers-banner.jpg"
-            alt="carousel-image-6"
-            height="300"
-          >
-        </template>
-      </b-carousel-slide>
-      <b-carousel-slide >
-        <template #img>
-          <img
-            class=""
-            src="../assets/banners/shumai-banner.jpg"
-            alt="carousel-image-7"
-            height="300"
-          >
-        </template>
-      </b-carousel-slide>
-      <b-carousel-slide >
-        <template #img>
-          <img
-            class=""
-            src="../assets/banners/fried-rice-banner.jpg"
-            alt="carousel-image-8"
-            height="300"
+            :class="showBanner ? 'show' : 'hide'" 
+            @load="showBanner = true"
           >
         </template>
       </b-carousel-slide>
@@ -95,18 +30,49 @@
 </template>
 
 <script>
+const images = {
+  image1: undefined,
+  image2: undefined,
+  image3: undefined,
+  image4: undefined,
+  image5: undefined,
+  image6: undefined,
+  image7: undefined,
+  image8: undefined,
+}
+import(/* webpackPreload: true */ "../assets/carousel/image1.jpg").then(m => images.image1 = m.default);
+import(/* webpackPreload: true */ "../assets/carousel/image2.jpg").then(m => images.image2 = m.default);
+import(/* webpackPreload: true */ "../assets/carousel/image3.jpg").then(m => images.image3 = m.default);
+import(/* webpackPreload: true */ "../assets/carousel/image4.jpg").then(m => images.image4 = m.default);
+import(/* webpackPreload: true */ "../assets/carousel/image5.jpg").then(m => images.image5 = m.default);
+import(/* webpackPreload: true */ "../assets/carousel/image6.jpg").then(m => images.image6 = m.default);
+import(/* webpackPreload: true */ "../assets/carousel/image7.jpg").then(m => images.image7 = m.default);
+import(/* webpackPreload: true */ "../assets/carousel/image8.jpg").then(m => images.image8 = m.default);
+
 export default {
   name: "Home",
+  data() {
+    return {
+      showBanner: false,
+      images,
+    }
+  },
 }
 </script>
 
 <style scoped>
 .home-page #home-carousel .carousel-item {
   overflow: hidden;
+  position: relative;
+  padding-bottom: 42.988505747%;
+  height: 0;
 }
 .home-page #home-carousel .carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 4px;
 }
 </style>

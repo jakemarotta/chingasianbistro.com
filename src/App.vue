@@ -6,7 +6,7 @@
       <div class="bg-main mx-auto mb-3 p-1 main-container">
         <b-overlay :show="pageLoading" bg-color="#aca286" rounded no-center>
           <transition name="fade" mode="out-in">
-            <router-view id="page-content-router" />
+            <component :is="pageComponent" />
           </transition>
         </b-overlay>
       </div>
@@ -26,6 +26,12 @@ import Sidebar from "./Sidebar.vue";
 import Footer from "./Footer.vue";
 import { ScrollToTop } from "./components";
 
+import About from "./pages/About.vue";
+import Contact from "./pages/Contact.vue";
+import Home from "./pages/Home.vue";
+import Location from "./pages/Location.vue";
+import Menu from "./pages/Menu.vue";
+
 export default {
   name: 'App',
   components: {
@@ -40,6 +46,16 @@ export default {
       sidebarState: {
         visible: false,
       }
+    }
+  },
+  computed: {
+    pageComponent() {
+      const path = this.$route.fullPath;
+      if (path.startsWith("/about")) return About;
+      if (path.startsWith("/contact")) return Contact;
+      if (path.startsWith("/location")) return Location;
+      if (path.startsWith("/menu")) return Menu;
+      return Home;
     }
   },
   provide() {
@@ -93,6 +109,7 @@ export default {
     width: 100%;
   }
 }
+
 /*
   Content
 */
@@ -173,4 +190,30 @@ footer {
 .border-bottom-black {
   border-bottom: 1px solid #000000;
 }
+
+/*
+  Image loading/sizing (wrapper should have padding-bottom)
+*/
+.image-wrapper {
+  position: relative;
+  height: 0;
+}
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 
+  Show/Hide elements 
+*/
+.show {
+  transition: 0.25s opacity ease;
+}
+.hide {
+  opacity: 0;
+}
+
 </style>
